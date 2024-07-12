@@ -1,0 +1,25 @@
+CloudAppEvents
+// Columns creation
+| extend Region = tostring(RawEventData.awsRegion)
+| extend RequestID = tostring(RawEventData.requestID)
+| extend AccountID = tostring(RawEventData.userIdentity.accountId)
+| extend UserName = tostring(RawEventData.userIdentity.userName)
+| extend Type = tostring(RawEventData.userIdentity.type)
+| extend Result = tostring(RawEventData.responseElements.ConsoleLogin)
+| extend environment = case(
+    AccountID == "Insert Account ID Here", "Insert Account Name Here",
+    "unknown" // default case if none of the above matches
+)
+// Where Cases
+| where Application contains "AWS" or Application == "Amazon Web Services"
+| where ActionType == "Console login"
+| where Result != "Success"
+//  
+| project
+    //my Columns
+	Region, RequestID, AccountID, AccountDisplayName, UserName, Type, environment, ActionType ,Result,
+    //identifiers
+	Timestamp, AccountId, OSPlatform, IPAddress, CountryCode, UserAgent, IsAdminOperation, ActivityObjects, ObjectName, RawEventData
+// others
+| summarize arg_max(Timestamp, *) by RequestID
+| order by Timestamp desc
