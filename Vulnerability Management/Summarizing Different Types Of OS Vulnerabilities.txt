@@ -1,0 +1,6 @@
+union DeviceTvmSoftwareVulnerabilities, CloudAppEvents
+| join kind=inner (DeviceTvmSoftwareVulnerabilitiesKB) on CveId
+| where VulnerabilitySeverityLevel == 'High' or VulnerabilitySeverityLevel == 'Critical' 
+| where SoftwareName contains "windows_10" or SoftwareName contains "mac_os" or SoftwareName contains "windows_11"
+| summarize CveCount = dcount(CveId1) by SoftwareName 
+| render piechart 
