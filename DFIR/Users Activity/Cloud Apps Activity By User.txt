@@ -1,0 +1,7 @@
+CloudAppEvents
+| extend resource = tostring(RawEventData.ObjectId)
+| extend SHA256 = tostring(RawEventData.Sha256)
+| extend DeviceName = tostring(RawEventData.DeviceName)
+| where AccountDisplayName contains "itay yogev" or DeviceName == "DeviceNameHere" // type here the user name or device name
+| project Timestamp, AccountDisplayName , ActionType, Application, IPAddress, resource, SHA256, DeviceName
+| order by Timestamp desc

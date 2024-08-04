@@ -1,0 +1,22 @@
+CloudAppEvents
+// Columns creation
+| extend Region = tostring(RawEventData.awsRegion)
+| extend RequestID = tostring(RawEventData.requestID)
+| extend AccountID = tostring(RawEventData.userIdentity.accountId)
+| extend Auditor_Role = tostring(RawEventData.userIdentity.sessionContext.sessionIssuer.userName)
+| extend UserName = tostring(RawEventData.userIdentity.userName)
+| extend DoesMFAAuthenticated = tostring(RawEventData.userIdentity.sessionContext.attributes.mfaAuthenticated)
+| extend operation = tostring(RawEventData.userIdentity.type)
+| extend requestParameters = tostring(RawEventData.requestParameters)
+| extend VPC_Peering_ID = tostring(RawEventData.requestParameters.ModifyVpcPeeringConnectionOptionsRequest.VpcPeeringConnectionId)
+| extend environment = case(
+    AccountID == "Add account ID here", "enviorment name here",
+    "unknown" // default case if none of the above matches
+)
+// Where Cases:
+// by platform
+| where Application contains "AWS" or Application == "Amazon Web Services"
+| where ActionType contains "vpc peering"
+| where ActionType == "Accept vpc peering connection" and environment contains "prod"
+| project Timestamp, AccountId, ActionType, environment, Region, ReportId
+| sort by Timestamp desc

@@ -1,0 +1,5 @@
+EmailAttachmentInfo
+| where SHA256 == "" // type here the SHA 256 of the file
+| where Timestamp > ago(30d)
+| where RecipientEmailAddress contains "" // type here the organization domain
+| order by Timestamp desc 

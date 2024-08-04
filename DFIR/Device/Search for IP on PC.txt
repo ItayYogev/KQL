@@ -1,0 +1,4 @@
+DeviceNetworkEvents
+| where DeviceName == "PC Name" // enter device name here
+| where RemoteIP == "1.2.3.4" // enter IP address here
+| order by Timestamp desc

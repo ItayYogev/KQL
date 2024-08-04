@@ -1,0 +1,4 @@
+DeviceProcessEvents
+| where DeviceName =~ "PC Name" // type here your PC name
+| sort by Timestamp desc
+| extend timeDiffInMilliseconds = datetime_diff('millisecond', next(Timestamp, 1), Timestamp)

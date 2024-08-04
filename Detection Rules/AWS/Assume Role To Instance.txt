@@ -1,0 +1,29 @@
+CloudAppEvents
+// Columns creation
+| extend Region = tostring(RawEventData.awsRegion)
+| extend RequestID = tostring(RawEventData.requestID)
+| extend AccountID = tostring(RawEventData.userIdentity.accountId)
+| extend Auditor_Role = tostring(RawEventData.userIdentity.sessionContext.sessionIssuer.userName)
+| extend operation = tostring(RawEventData.userIdentity.type)
+| extend availabilityZone = tostring(RawEventData.requestParameters.availabilityZone)
+| extend Instance_ID = tostring(RawEventData.requestParameters.instanceId)
+| extend platform_Name = tostring(RawEventData.platformName)
+| extend environment = case(
+    AccountID == "1234567890", "Example-production-Account-1",
+	AccountID == "1234567890", "Example-production-Account-2",
+	AccountID == "1234567890", "Example-production-Account-3",
+	AccountID == "1234567890", "Example-Staging-Account",
+	AccountID == "1234567890", "Example-Development-Account",
+    "unknown" // default case if none of the above matches
+)
+// Where Cases
+| where Application contains "AWS" or Application == "Amazon Web Services"
+| where ActionType == "UpdateInstanceInformation"
+| where operation == "AssumedRole"
+//  
+| project
+	Timestamp, Region, RequestID, AccountID, Auditor_Role, Instance_ID ,operation, environment, availabilityZone,
+	OSPlatform, IPAddress, CountryCode, UserAgent, ActionType, IsAdminOperation, ActivityObjects, RawEventData, AccountDisplayName, AdditionalFields, UncommonForUser
+// others
+| summarize arg_max(Timestamp, *) by RequestID
+| order by Timestamp desc

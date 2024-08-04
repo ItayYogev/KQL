@@ -1,0 +1,4 @@
+DeviceEvents
+| where ActionType == "UserAccountDeleted"
+| where Timestamp > ago(45m)
+| project Timestamp, DeviceName, User_Name_Created = AccountName, Who_Created_The_User = InitiatingProcessAccountName, DeviceId, ReportId
