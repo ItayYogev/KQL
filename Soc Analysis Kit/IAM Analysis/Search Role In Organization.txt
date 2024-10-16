@@ -1,3 +1,0 @@
-IdentityInfo
-| where AssignedRoles contains "Global Administrator" // type here the role name 
-| summarize LatestEntry = arg_max(Timestamp, *) by AccountObjectId

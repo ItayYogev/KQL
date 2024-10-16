@@ -1,1 +1,8 @@
-The "DFIR" folder is dedicated to queries and tools used for Digital Forensics and Incident Response (DFIR) within the organization. It contains a collection of KQL queries designed to assist in investigating and responding to security incidents by analyzing logs and data related to digital forensics. The folder aims to streamline the incident response process, improve forensic analysis, and provide actionable insights during investigations. By centralizing these resources, the folder supports effective detection, analysis, and resolution of security incidents.
+# SOC Analysis Kit
+The SOC Analysis Kit is a comprehensive folder designed to support Security Operations Center (SOC) teams in investigating and analyzing various security events. It contains three sub-folders, each focusing on different critical aspects of cybersecurity:
+
+1. Device Analysis: KQL queries for monitoring and investigating device activity, including logon events, software updates, and network interactions.
+2. Email Analysis: KQL queries for analyzing email traffic, phishing attempts, and suspicious email behavior to detect potential threats.
+3. IAM Analysis: KQL queries for monitoring identity and access management, tracking user account activity, and identifying abnormal access patterns.
+
+This kit provides SOC analysts with targeted queries to streamline security investigations and improve incident response.
