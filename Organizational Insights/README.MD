@@ -1,3 +1,8 @@
-The "vulnerability management" folder is specifically designed to present a comprehensive view of all existing OS vulnerabilities within the organization. By concentrating exclusively on OS vulnerabilities, the folder allows for the precise tailoring of queries to exclude non-relevant data, ensuring that the focus remains solely on operating system-related issues.
+# SOC Analysis Kit
+The SOC Analysis Kit is a comprehensive folder designed to support Security Operations Center (SOC) teams in investigating and analyzing various security events. It contains three sub-folders, each focusing on different critical aspects of cybersecurity:
 
-The folder includes various queries that provide insights into OS vulnerabilities from multiple perspectives, such as their age, distribution across different devices, types, and severity levels. This structured approach helps in identifying and understanding vulnerabilities in detail, supporting more effective management, prioritization, and remediation of security risks associated with the organization's operating systems.
+- Device Analysis: KQL queries for monitoring and investigating device activity, including logon events, software updates, and network interactions.
+- Email Analysis: KQL queries for analyzing email traffic, phishing attempts, and suspicious email behavior to detect potential threats.
+- IAM Analysis: KQL queries for monitoring identity and access management, tracking user account activity, and identifying abnormal access patterns.
+
+This kit provides SOC analysts with targeted queries to streamline security investigations and improve incident response.
