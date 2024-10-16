@@ -1,0 +1,3 @@
+AlertEvidence 
+| where AccountName contains ""  or DeviceName == "" // type the user name or device here
+| order by Timestamp desc

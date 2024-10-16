@@ -8,6 +8,7 @@ CloudAppEvents
 | extend DoesMFAAuthenticated = tostring(RawEventData.userIdentity.sessionContext.attributes.mfaAuthenticated)
 | extend operation = tostring(RawEventData.userIdentity.type)
 | extend requestParameters = tostring(RawEventData.requestParameters)
+| extend SourceIPAddress = tostring(RawEventData.sourceIPAddress)
 | extend environment = case(
     AccountID == "1234567890", "Example-production-Account-1",
 	AccountID == "1234567890", "Example-production-Account-2",
@@ -23,4 +24,4 @@ CloudAppEvents
 | where operation == "AssumedRole"
 | where environment in ("Example-production-Account-1", "Example-production-Account-2", "Example-production-Account-3")
 | where Timestamp > ago(30m)
-| project Timestamp, AccountId, environment, Region, ReportId
+| project Timestamp, AccountId, environment, Region, SourceIPAddress ,ReportId

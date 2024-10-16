@@ -1,4 +1,0 @@
-union IdentityDirectoryEvents, DeviceEvents
-| where ActionType == "User Account Created" or ActionType == "UserAccountCreated"
-| where Timestamp > ago(30d)
-| order by Timestamp

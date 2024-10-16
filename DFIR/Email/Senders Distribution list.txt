@@ -1,6 +1,0 @@
-EmailEvents 
-| where SenderFromDomain !contains "" // enter your organization domain here
-| where RecipientEmailAddress == "" // enter the Recipient Email Address here
-| where Timestamp > ago(14d)
-| summarize sender = count() by SenderFromAddress
-| render piechart 

@@ -1,0 +1,7 @@
+// This query is detecting download of torrent files from PC.
+DeviceFileEvents
+| where ActionType in ('FileCreated')
+| where FileName contains ".torrent"
+| where Timestamp > ago(1h)
+| project Timestamp, DeviceName, InitiatingProcessAccountName ,ActionType, FileName, FolderPath, SHA256, DeviceId, ReportId
+| order by Timestamp desc

@@ -1,0 +1,2 @@
+UrlClickEvents
+| where Url contains "example.com" // type here the malicious URL 

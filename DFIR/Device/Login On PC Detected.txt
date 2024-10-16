@@ -1,3 +1,0 @@
-DeviceLogonEvents
-| where DeviceName == "PC Name Here"
-| where Timestamp > ago(2h)

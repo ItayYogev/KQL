@@ -1,0 +1,4 @@
+union IdentityDirectoryEvents, DeviceEvents
+| where ActionType contains "disable" or ActionType == "UserAccountDeleted"
+| where Timestamp > ago(30d)
+| order by Timestamp

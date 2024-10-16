@@ -1,0 +1,3 @@
+AlertEvidence
+| where EntityType =~ "ip"
+| where RemoteIP == "" // type here the ip address

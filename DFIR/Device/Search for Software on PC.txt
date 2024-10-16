@@ -1,6 +1,0 @@
-union DeviceTvmSoftwareInventory, DeviceInfo
-| where SoftwareName == "Softawre Name" // enter the software name here
-| where DeviceName == "PC-Name" // enter the device name here
-| sort by SoftwareVersion desc
-| project DevivceITS = trim_end(".", DeviceName), OSVersion, SoftwareName, SoftwareVersion, LoggedOnUsers
-| sort by SoftwareVersion desc

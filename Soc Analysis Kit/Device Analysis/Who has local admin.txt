@@ -1,0 +1,5 @@
+DeviceLogonEvents
+| where IsLocalAdmin == "1"
+| where Timestamp > ago(300d)
+| summarize arg_max(Timestamp, *) by DeviceName
+| project DeviceName, AccountName

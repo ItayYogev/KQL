@@ -1,0 +1,9 @@
+// This query is detecting download of torrent files from cloud cloud apps.
+// in order to see the source, please look on the ObjectName column.
+CloudAppEvents
+| where ActionType in ('FileDownloadedFromBrowser', 'FileDownloaded')
+| where ActivityType contains "download"
+| where ObjectName contains ".torrent"
+| where Timestamp > ago(1h)
+| project Timestamp, ActionType, AccountDisplayName, ObjectName, DeviceType, OSPlatform, UserAgent ,IPAddress, CountryCode, ReportId, AccountObjectId
+| order by Timestamp desc

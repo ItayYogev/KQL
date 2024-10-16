@@ -1,3 +1,0 @@
-DeviceNetworkEvents
-| where RemoteIP == "1.1.1.1" // type IP address here
-| order by Timestamp desc
