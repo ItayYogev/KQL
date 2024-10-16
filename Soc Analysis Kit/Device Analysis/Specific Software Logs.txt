@@ -1,6 +1,0 @@
-DeviceProcessEvents
-| where FileName =~ "ProcessName.exe" // type the process name
-    or SHA256 =~ "SHA256 will be here"  // type the sha256
-    or ProcessVersionInfoProductName contains "Software Name will be here" // type the file name
-| where DeviceName =~ "Device Name will be here" // enter the device name here
-| project Timestamp, DeviceName, AccountName, AccountUpn, ActionType, FolderPath, SHA256, ProcessVersionInfoCompanyName, SoftwareName = ProcessVersionInfoProductName, Description = ProcessVersionInfoFileDescription , SoftwareVersion = ProcessVersionInfoProductName, ProcessId, ProcessCommandLine
