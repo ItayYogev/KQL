@@ -3,4 +3,4 @@ The CVE Count by Severity Level query analyzes software vulnerabilities by categ
 
 This overview enables organizations to assess their security posture more effectively, fostering informed decision-making about risk management and mitigation plans.
 
-![Screenshot](https://github.com/user-attachments/assets/408240ae-0fb9-464a-a912-d003270fb856)
+![Screenshot](https://github.com/user-attachments/assets/af14a840-e053-4c31-b5c0-96c699c5729f)
