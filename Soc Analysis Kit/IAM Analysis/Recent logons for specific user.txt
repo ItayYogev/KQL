@@ -1,6 +1,0 @@
-AADSignInEventsBeta
-| where AccountDisplayName =~ "Itay Yogev" or AccountUpn == "example@example.com" // enter the user name or the email address
-| where LogonType !contains "nonInteractiveUser"
-| where Timestamp > ago(3d)
-| summarize arg_max(Timestamp, *) by Timestamp, Application // remove duplications
-| order by Timestamp desc
