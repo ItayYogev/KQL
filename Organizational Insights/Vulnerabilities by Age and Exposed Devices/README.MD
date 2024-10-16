@@ -1,4 +1,4 @@
-# Vulnerability Severity and Age Metrics
+# Vulnerabilities by Age and Exposed Devices 
 The query calculates the age of each vulnerability in days and summarizes the count of affected devices for each CVE, categorized by vulnerability severity level.
 
 This query provides valuable insights into the organization's vulnerability landscape by Understanding how long vulnerabilities have been present helps prioritize remediation efforts, especially for older, more exploitable vulnerabilities.

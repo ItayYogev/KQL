@@ -1,4 +1,0 @@
-DeviceEvents
-| where ActionType == "UserAccountCreated"
-| where Timestamp > ago(45m)
-| project Timestamp, DeviceName, User_Name_Created = AccountName, DeviceId, ReportId

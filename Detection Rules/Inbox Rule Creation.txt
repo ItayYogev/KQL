@@ -1,0 +1,8 @@
+let start_date = now(-1d);
+let end_date = now();
+CloudAppEvents 
+| where Timestamp between (start_date .. end_date)
+| where ActionType in ("New-InboxRule", "Set-InboxRule", "UpdateInboxRules", "AddMailboxRule")  
+| summarize arg_max(Timestamp, *) by Timestamp
+| project Timestamp, AccountDisplayName ,ActionType, CountryCode, City, ISP, IPAddress, RuleConfig = RawEventData.Parameters, RawEventData, ReportId, AccountObjectId
+| sort by Timestamp desc
