@@ -1,8 +1,4 @@
-# SOC Analysis Kit
-The SOC Analysis Kit is a comprehensive folder designed to support Security Operations Center (SOC) teams in investigating and analyzing various security events. It contains three sub-folders, each focusing on different critical aspects of cybersecurity:
+# Organizational Insights
+The Organizational Insights folder contains a collection of analytical queries designed to provide a comprehensive overview of the organization's cybersecurity posture. Each query is focused on different aspects of vulnerability and threat management, enabling security teams to gain valuable insights into their security landscape.
 
-- Device Analysis: KQL queries for monitoring and investigating device activity, including logon events, software updates, and network interactions.
-- Email Analysis: KQL queries for analyzing email traffic, phishing attempts, and suspicious email behavior to detect potential threats.
-- IAM Analysis: KQL queries for monitoring identity and access management, tracking user account activity, and identifying abnormal access patterns.
-
-This kit provides SOC analysts with targeted queries to streamline security investigations and improve incident response.
+This folder empowers organizations to enhance their cybersecurity efforts by offering a consolidated view of vulnerabilities and threats. By leveraging these queries, security teams can prioritize their actions, allocate resources effectively, and develop informed strategies for vulnerability management and threat response. 
