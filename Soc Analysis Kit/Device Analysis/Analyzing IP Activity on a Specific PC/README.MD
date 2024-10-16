@@ -3,4 +3,4 @@ This query performs an IP search on a specific PC by analyzing network events re
 
 This query is valuable for monitoring and investigating potential security incidents. By focusing on specific devices and remote IP addresses, analysts can uncover unusual or unauthorized activities, trace the origin of suspicious connections, and correlate these events with other security alerts.
 
-![screenshot](https://github.com/user-attachments/assets/89fe8125-2c30-47aa-b447-3b431192b542)
+![screenshot](https://github.com/user-attachments/assets/8742fe7c-698d-40db-8d0d-c87ce677e3a5)
