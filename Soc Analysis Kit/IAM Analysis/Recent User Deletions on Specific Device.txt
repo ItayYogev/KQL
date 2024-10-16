@@ -1,6 +1,0 @@
-union IdentityDirectoryEvents, DeviceEvents
-| where ActionType == "User Account Deleted" or ActionType == "UserAccountDeleted"
-| where Timestamp > ago(30d)
-| where AccountDomain == "" // type here the device name of the emmployee
-    or TargetAccountUpn == "" // type here the email address of the employee if thats not a local user
-| order by Timestamp
