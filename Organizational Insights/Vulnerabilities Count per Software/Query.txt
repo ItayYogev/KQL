@@ -1,0 +1,4 @@
+union DeviceTvmSoftwareVulnerabilities, CloudAppEvents
+| join kind=inner (DeviceTvmSoftwareVulnerabilitiesKB) on CveId
+| summarize CveCount = dcount(CveId1) by SoftwareName 
+| render piechart 
