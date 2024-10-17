@@ -1,0 +1,30 @@
+union CloudAppEvents, IdentityLogonEvents 
+// Columns creation
+| extend Region = tostring(RawEventData.awsRegion)
+| extend RequestID = tostring(RawEventData.requestID)
+| extend AccountID = tostring(RawEventData.userIdentity.accountId)
+| extend Auditor_Role = tostring(RawEventData.userIdentity.sessionContext.sessionIssuer.userName)
+| extend UserName = tostring(RawEventData.userIdentity.userName)
+| extend DoesMFAAuthenticated = tostring(RawEventData.userIdentity.sessionContext.attributes.mfaAuthenticated)
+| extend operation = tostring(RawEventData.userIdentity.type)
+| extend requestParameters = tostring(RawEventData.requestParameters)
+| extend environment = case(
+    AccountID == "1234567890", "Example-production-Account-1",
+	AccountID == "1234567890", "Example-production-Account-2",
+	AccountID == "1234567890", "Example-production-Account-3",
+	AccountID == "1234567890", "Example-Staging-Account",
+	AccountID == "1234567890", "Example-Development-Account",
+    "unknown" // default case if none of the above matches
+)
+// Where Cases
+| where Application contains "AWS" or Application == "Amazon Web Services"
+| where ActionType in ("GetCostForecast", "GetCostAndUsage", "ListEnrollmentStatuses")
+| where operation == "IAMUser"
+| where DoesMFAAuthenticated != "true"
+| where Timestamp > ago(1h)
+//  
+| project Timestamp, UserName, DoesMFAAuthenticated, AccountDisplayName, AccountID, Region, environment, IPAddress, CountryCode, UserAgent, RequestID, ReportId, DeviceName
+| summarize arg_max(Timestamp, *) by RequestID
+| summarize LatestRecord = arg_max(Timestamp, *) by AccountDisplayName, bin(Timestamp, 1m)
+| project Timestamp, UserName, AccountDisplayName, DoesMFAAuthenticated, AccountID, Region, environment, IPAddress, CountryCode, UserAgent, RequestID, ReportId, DeviceName
+| order by Timestamp desc
