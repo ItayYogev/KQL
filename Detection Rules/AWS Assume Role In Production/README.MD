@@ -5,6 +5,9 @@ In environments like AWS, where production resources are highly sensitive, these
 
 ![Screenshot](https://github.com/user-attachments/assets/f963468e-f28a-41e2-ba0f-7753bae0d347)
 
+
+
+
 ### Alert simulation:
 
 When the alert pops up, you'll need to click on "Query Results" to see all the details:
