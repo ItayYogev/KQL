@@ -22,9 +22,4 @@ union CloudAppEvents, IdentityLogonEvents
 | where operation == "IAMUser"
 | where DoesMFAAuthenticated != "true"
 | where Timestamp > ago(1h)
-//  
-| project Timestamp, UserName, DoesMFAAuthenticated, AccountDisplayName, AccountID, Region, environment, IPAddress, CountryCode, UserAgent, RequestID, ReportId, DeviceName
-| summarize arg_max(Timestamp, *) by RequestID
-| summarize LatestRecord = arg_max(Timestamp, *) by AccountDisplayName, bin(Timestamp, 1m)
-| project Timestamp, UserName, AccountDisplayName, DoesMFAAuthenticated, AccountID, Region, environment, IPAddress, CountryCode, UserAgent, RequestID, ReportId, DeviceName
-| order by Timestamp desc
+| project Timestamp, AccountId, environment, Region, ReportId
