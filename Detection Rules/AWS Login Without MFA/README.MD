@@ -10,4 +10,5 @@ Unauthorized access to these functions could lead to malicious activities, such 
 
 When the alert pops up, you'll need to click on "Query Results" to see all the details:
 
-![Alert](https://github.com/user-attachments/assets/26e4f1ba-8348-4d35-9348-e03fdaac31cc)
+![Alert](https://github.com/user-attachments/assets/653283e8-b2a8-499f-b78d-899cf4edcf4f)
+
