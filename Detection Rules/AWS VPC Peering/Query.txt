@@ -14,7 +14,6 @@ CloudAppEvents
     "unknown" // default case if none of the above matches
 )
 // Where Cases:
-// by platform
 | where Application contains "AWS" or Application == "Amazon Web Services"
 | where ActionType contains "vpc peering"
 | where ActionType == "Accept vpc peering connection" and environment contains "prod"
