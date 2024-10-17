@@ -1,13 +1,4 @@
-# Inbox Rule Creation
-This query is designed to detect the creation or modification of inbox rules within email accounts.
+# Detection Rules
+The Detection Rules folder is a comprehensive collection of KQL (Kusto Query Language) queries designed to enhance an organization's cybersecurity posture by providing proactive monitoring and threat detection capabilities. Each query within this folder addresses specific risk areas and helps identify potentially malicious or unauthorized activities in various cloud and network environments.
 
-The creation of detection rules like this is critical for identifying potential malicious activity. Inbox rules can be abused by attackers to automatically forward sensitive emails, delete important messages, or hide evidence of unauthorized access.
-
-![screenshot1](https://github.com/user-attachments/assets/4f07e7f6-efb0-45eb-a765-c14427fa6a5f)
-
-### Alert simulation:
-
-When the alert pops up, you'll need to click on "Query Results" to see all the details:
-
-![Alert1](https://github.com/user-attachments/assets/53d5f7d5-6495-458d-a097-46cc81226c96)
-
+These detection rules focus on key areas of concern such as unauthorized access, privileged account misuse, and policy violations. By implementing these queries, security teams can maintain heightened visibility into their operational environments, allowing them to detect anomalies and respond effectively to potential threats before they escalate into serious incidents
