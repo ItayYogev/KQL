@@ -1,1 +1,7 @@
-This folder aims to enhance the organization's detection and analysis capabilities by centralizing KQL queries for the "Microsoft Defender XDR" solution. It provides a resource for developing and refining queries to improve threat visibility and response efficiency, ultimately strengthening the organization's security posture.
+# KQL:
+The KQL folder is a folder I created as part of my day-to-day tasks to improve the security posture of organizations. The queries are tailored for the Microsoft Defender XDR platform.
+
+By leveraging KQL, these queries automate threat detection processes. They can be customized to meet specific organizational security needs, and the detection rules help identify threats before they cause significant damage.
+There are more queries that I want to recommend in the 'stars' category on my profile.
+
+The queries and tools within the SOC Analysis Kit enable teams to streamline the incident response process by providing ready-to-use resources for analyzing breaches.
