@@ -7,6 +7,6 @@ These detection rules focus on key areas of concern such as unauthorized access,
 1. Paste the query in the "Advanced hunting" category and insert the relevant details into the query
 2. Click on the "Create Detection Rule" button on the right side of the screen.
 3. Fill in the Alert details
-> **Note:** Note: My recommendation is to choose the frequency of "Continuous (NRT)." This near real-time option allows an alert to pop up right after the data is ingested into the XDR. Sometimes it may not be possible to choose this option if the queries are structured in a way that requires waiting for additional data.
+> **Note:** My recommendation is to choose the frequency of "Continuous (NRT)." This near real-time option allows an alert to pop up right after the data is ingested into the XDR. Sometimes it may not be possible to choose this option if the queries are structured in a way that requires waiting for additional data.
 4. Choose the impacted entities.
 
