@@ -1,19 +1,46 @@
-# Detection Rules 
-The Detection Rules folder is a comprehensive collection of KQL (Kusto Query Language) queries designed to enhance an organization's cybersecurity posture by providing proactive monitoring and threat detection capabilities. Each query within this folder addresses specific risk areas and helps identify potentially malicious or unauthorized activities in various cloud and network environments.
+# 🔍 Detection Rules
 
-These detection rules focus on key areas of concern such as unauthorized access, privileged account misuse, and policy violations. By implementing these queries, security teams can maintain heightened visibility into their operational environments, allowing them to detect anomalies and respond effectively to potential threats before they escalate into serious incidents.
+The **Detection Rules** folder is an essential collection of **KQL (Kusto Query Language) queries** aimed at strengthening an organization’s cybersecurity posture by enabling proactive monitoring and threat detection. Each query in this folder is designed to address specific risk areas, helping identify potentially malicious or unauthorized activities across various cloud and network environments.
 
-### How To Create Detection Rule: 
-1. In the microsoft defender portal, click on: invrstigation & response > hunting > advanced hunting:
-<img width="182" alt="advanced hunting" src="https://github.com/user-attachments/assets/bba81448-0446-45ae-ba63-7efed98d646d">
-2. Paste the query in the "Advanced hunting" category and insert the relevant details into the query
-3. Click on the "Create Detection Rule" button on the right side of the screen:
-<img width="929" alt="create Detection rule" src="https://github.com/user-attachments/assets/947bbc7b-5169-42ec-b662-0cc7396adf75">
-4. Fill in the Alert details as you want:
-<img width="222" alt="alert details" src="https://github.com/user-attachments/assets/18d1ca0b-5110-4829-80ad-a8fbe3f10773">
-> **Note:** My recommendation is to choose the frequency of "Continuous (NRT)." This near real-time option allows an alert to pop up right after the data is ingested into the XDR. Sometimes it may not be possible to choose this option if the queries are structured in a way that requires waiting for additional data.
-5. Choose the impacted entities:
-<img width="503" alt="Impacted entities" src="https://github.com/user-attachments/assets/57a873ff-cbd0-444e-aa0f-570e1131dcb3">
-6. choose the scope that you want that the alert will be:
-<img width="145" alt="scope" src="https://github.com/user-attachments/assets/27f0309e-c438-48dc-a0a3-9b57676469ac">
-7. click submit
+These detection rules target critical security concerns, such as unauthorized access, privileged account misuse, and policy violations. Implementing these queries allows security teams to maintain robust visibility over their operational environments, enabling swift anomaly detection and effective response to emerging threats.
+
+---
+
+## 🛠️ How to Create a Detection Rule
+
+1. **Navigate to Advanced Hunting**  
+   In the **Microsoft Defender** portal, go to:  
+   **Investigation & Response > Hunting > Advanced Hunting**  
+   ![Advanced Hunting](https://github.com/user-attachments/assets/bba81448-0446-45ae-ba63-7efed98d646d)
+
+2. **Paste the Query**  
+   Insert your query in the **Advanced Hunting** search bar and adjust any relevant details.
+
+3. **Create Detection Rule**  
+   Click the **Create Detection Rule** button on the right side.  
+   ![Create Detection Rule](https://github.com/user-attachments/assets/947bbc7b-5169-42ec-b662-0cc7396adf75)
+
+4. **Set Alert Details**  
+   Customize your alert details, including naming and alert priority.  
+   ![Alert Details](https://github.com/user-attachments/assets/18d1ca0b-5110-4829-80ad-a8fbe3f10773)  
+   > **Tip:** Select the **Continuous (NRT)** frequency for near real-time alerts, which ensures notifications appear immediately after data ingestion. Note that certain query structures may not support this option and may require additional data waiting time.
+
+5. **Define Impacted Entities**  
+   Specify the entities impacted by this detection rule.  
+   ![Impacted Entities](https://github.com/user-attachments/assets/57a873ff-cbd0-444e-aa0f-570e1131dcb3)
+
+6. **Set Alert Scope**  
+   Choose the alert scope according to your monitoring needs.  
+   ![Scope](https://github.com/user-attachments/assets/27f0309e-c438-48dc-a0a3-9b57676469ac)
+
+7. **Submit**  
+   Click **Submit** to activate your detection rule.
+
+---
+
+## 🚀 Benefits of Detection Rules
+- **Enhanced Visibility**: Continuous monitoring across multiple security domains.
+- **Proactive Defense**: Early detection of anomalies and potential threats.
+- **Customizable Alerts**: Tailor alerts to meet specific organizational needs.
+
+Implementing these detection rules allows your team to stay ahead of threats, respond quickly, and safeguard your organization's environment more effectively.
