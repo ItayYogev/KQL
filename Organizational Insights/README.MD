@@ -1,31 +1,45 @@
-# Organizational Insights
+# 📊 Organizational Insights
 
-The **Organizational Insights** folder is a curated collection of analytical queries that deliver an in-depth look at the organization's cybersecurity posture. Each query targets distinct aspects of vulnerability and threat management, equipping security teams with actionable insights to understand and reinforce their security framework.
+The **Organizational Insights** folder is a meticulously curated collection of analytical queries offering a comprehensive view of an organization's cybersecurity posture. Each query is crafted to address specific areas of vulnerability and threat management, providing security teams with actionable insights to understand and strengthen their security frameworks.
 
-Microsoft collects vast amounts of data that can be transformed into valuable charts and diagrams, enabling CISOs to make informed, strategic decisions.
+Microsoft aggregates extensive data, which can be transformed into insightful charts and diagrams, allowing **CISOs** to make informed and strategic decisions effectively.
 
-This folder empowers organizations to enhance their cybersecurity measures by providing a consolidated view of vulnerabilities and threats. Using these queries, security teams can prioritize actions, allocate resources efficiently, and create informed strategies for vulnerability management and threat response.
+This folder empowers organizations to bolster their cybersecurity measures by offering a unified view of vulnerabilities and threats. Through these queries, security teams can:
+- **Prioritize Actions:** Focus on the most pressing security risks.
+- **Allocate Resources Efficiently:** Direct efforts where they’re needed most.
+- **Formulate Informed Strategies:** Design data-driven approaches for vulnerability management and threat response.
 
-## Project Highlights
+---
 
-This repository includes various projects that provide critical insights, such as:
+## 🌟 Project Highlights
 
-### Techniques Breakdown by Security Alerts
-Visualizes the distribution of MITRE ATT&CK techniques involved in security alerts:
+This repository includes projects that deliver critical insights, such as:
 
-![image](https://github.com/user-attachments/assets/04e3326f-8d51-4013-aa20-3eafda323c52)
+### 1. Techniques Breakdown by Security Alerts
+Visualizes the distribution of **MITRE ATT&CK** techniques involved in security alerts, allowing teams to identify common tactics used in threats.
 
-### CVE Count by Severity Level
-Analyzes software vulnerabilities by severity—categorized as Low, Medium, High, and Critical:
+![Techniques Breakdown](https://github.com/user-attachments/assets/04e3326f-8d51-4013-aa20-3eafda323c52)
 
-![image](https://github.com/user-attachments/assets/72d444e2-e307-45ad-81b2-fcdb2f8ad642)
+---
 
-### Vulnerabilities by Age and Exposed Devices
-Calculates the age of each vulnerability and summarizes the affected devices for each CVE, sorted by severity:
+### 2. CVE Count by Severity Level
+Categorizes software vulnerabilities based on severity levels—**Low**, **Medium**, **High**, and **Critical**—helping teams to prioritize and address the most significant threats.
 
-![image](https://github.com/user-attachments/assets/f75c22a4-949c-4f0e-bc92-9ba0cc3e079b)
+![CVE Severity Count](https://github.com/user-attachments/assets/72d444e2-e307-45ad-81b2-fcdb2f8ad642)
 
-### Vulnerabilities Count per Software
-Counts unique Common Vulnerabilities and Exposures (CVEs) per software application:
+---
 
-![image](https://github.com/user-attachments/assets/1db901fb-2001-4120-9bb1-5bd0f2af2ecb)
+### 3. Vulnerabilities by Age and Exposed Devices
+Tracks the age of each vulnerability and summarizes the affected devices for each **CVE**, sorted by severity. This query highlights lingering risks and assets exposed to potential exploitation.
+
+![Vulnerabilities by Age](https://github.com/user-attachments/assets/f75c22a4-949c-4f0e-bc92-9ba0cc3e079b)
+
+---
+
+### 4. Vulnerabilities Count per Software
+Counts unique **Common Vulnerabilities and Exposures (CVEs)** per software application, helping teams understand which applications are most vulnerable and may require additional scrutiny.
+
+![Vulnerabilities per Software](https://github.com/user-attachments/assets/1db901fb-2001-4120-9bb1-5bd0f2af2ecb)
+
+---
+
