@@ -10,27 +10,22 @@ This folder empowers organizations to enhance their cybersecurity measures by pr
 
 This repository includes various projects that provide critical insights, such as:
 
-### CVE Count by Severity Level
-Analyzes software vulnerabilities by severity—categorized as Low, Medium, High, and Critical:
-
-![Screenshot](https://github.com/user-attachments/assets/af14a840-e053-4c31-b5c0-96c699c5729f)
-
-### Device Vulnerability Count Overview
-Aggregates and analyzes software vulnerabilities affecting devices within the organization:
-
-![Screenshot](https://github.com/user-attachments/assets/6f3aa1f8-c712-4bae-94d9-a8009ec2a902)
-
 ### Techniques Breakdown by Security Alerts
 Visualizes the distribution of MITRE ATT&CK techniques involved in security alerts:
 
-![Screenshot](https://github.com/user-attachments/assets/18d86597-4efd-4236-8728-869feda42117)
+![image](https://github.com/user-attachments/assets/04e3326f-8d51-4013-aa20-3eafda323c52)
+
+### CVE Count by Severity Level
+Analyzes software vulnerabilities by severity—categorized as Low, Medium, High, and Critical:
+
+![image](https://github.com/user-attachments/assets/72d444e2-e307-45ad-81b2-fcdb2f8ad642)
 
 ### Vulnerabilities by Age and Exposed Devices
 Calculates the age of each vulnerability and summarizes the affected devices for each CVE, sorted by severity:
 
-![Screenshot](https://github.com/user-attachments/assets/e47a8a41-13a8-41a1-b42a-706b1d2156df)
+![image](https://github.com/user-attachments/assets/f75c22a4-949c-4f0e-bc92-9ba0cc3e079b)
 
 ### Vulnerabilities Count per Software
 Counts unique Common Vulnerabilities and Exposures (CVEs) per software application:
 
-![Screenshot](https://github.com/user-attachments/assets/2e9f68c0-002a-4b4f-a9bd-0fa168448c15)
+![image](https://github.com/user-attachments/assets/1db901fb-2001-4120-9bb1-5bd0f2af2ecb)
