@@ -1,35 +1,36 @@
 # Organizational Insights
-The Organizational Insights folder contains a collection of analytical queries designed to provide a comprehensive overview of the organization's cybersecurity posture. Each query is focused on different aspects of vulnerability and threat management, enabling security teams to gain valuable insights into their security landscape.
 
-microsoft collcets big amounts of data that i can be used in order to create valuble charts & diagrams that can give to the CISO the ability to take the right decitions.
+The **Organizational Insights** folder is a curated collection of analytical queries that deliver an in-depth look at the organization's cybersecurity posture. Each query targets distinct aspects of vulnerability and threat management, equipping security teams with actionable insights to understand and reinforce their security framework.
 
+Microsoft collects vast amounts of data that can be transformed into valuable charts and diagrams, enabling CISOs to make informed, strategic decisions.
 
-This folder empowers organizations to enhance their cybersecurity efforts by offering a consolidated view of vulnerabilities and threats. By leveraging these queries, security teams can prioritize their actions, allocate resources effectively, and develop informed strategies for vulnerability management and threat response. 
+This folder empowers organizations to enhance their cybersecurity measures by providing a consolidated view of vulnerabilities and threats. Using these queries, security teams can prioritize actions, allocate resources efficiently, and create informed strategies for vulnerability management and threat response.
 
-### Examples
-this repository cotains different project such as:
+## Project Highlights
 
-#### CVE Count by Severity Level
-Query that analyzes software vulnerabilities by categorizing them based on their severity levels—Medium, High, Critical, and Low: 
+This repository includes various projects that provide critical insights, such as:
+
+### CVE Count by Severity Level
+Analyzes software vulnerabilities by severity—categorized as Low, Medium, High, and Critical:
 
 ![Screenshot](https://github.com/user-attachments/assets/af14a840-e053-4c31-b5c0-96c699c5729f)
 
-#### Device Vulnerability Count Overview
-Query aggregates and analyzes data related to software vulnerabilities on devices within the organization:
+### Device Vulnerability Count Overview
+Aggregates and analyzes software vulnerabilities affecting devices within the organization:
 
 ![Screenshot](https://github.com/user-attachments/assets/6f3aa1f8-c712-4bae-94d9-a8009ec2a902)
 
-#### Techniques Breakdown by Security Alerts
-Query that visualizes the distribution of MITRE ATT&CK techniques involved in security alerts:
+### Techniques Breakdown by Security Alerts
+Visualizes the distribution of MITRE ATT&CK techniques involved in security alerts:
 
 ![Screenshot](https://github.com/user-attachments/assets/18d86597-4efd-4236-8728-869feda42117)
 
-#### Vulnerabilities by Age and Exposed Devices 
-Query that calculates the age of each vulnerability in days and summarizes the count of affected devices for each CVE, categorized by vulnerability severity level:
+### Vulnerabilities by Age and Exposed Devices
+Calculates the age of each vulnerability and summarizes the affected devices for each CVE, sorted by severity:
 
 ![Screenshot](https://github.com/user-attachments/assets/e47a8a41-13a8-41a1-b42a-706b1d2156df)
 
-#### Vulnerabilities Count per Software
-Query provides an analysis of software vulnerabilities by counting the number of unique Common Vulnerabilities and Exposures (CVEs) associated with each software application:
+### Vulnerabilities Count per Software
+Counts unique Common Vulnerabilities and Exposures (CVEs) per software application:
 
 ![Screenshot](https://github.com/user-attachments/assets/2e9f68c0-002a-4b4f-a9bd-0fa168448c15)
