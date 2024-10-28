@@ -31,6 +31,6 @@ Equips the security operations center (SOC) team with essential tools for detail
 
 ## How to Use
 
-1. **Clone the Repository**  
+**Clone the Repository**  
    ```bash
    git clone https://github.com/ItayYogev/KQL.git
